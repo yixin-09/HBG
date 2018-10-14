@@ -1,0 +1,18 @@
+Output @ test_gsl_sf_legendre_P3.c:25 in main (addr 400C99)
+18.465840 bits average error
+33.651703 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+    (FPCore (x)
+      :pre (and (<= 7.745960e-1 x) (<= x 7.745972e-1))
+          (- (* (* 5.000000 x) x) 3.000000))
+   legendre_poly.c:95 in gsl_sf_legendre_P3_e (addr 500534E)
+   Problematic inputs: 7.745960e-1 <= x <= 7.745972e-1
+   Example problematic input: (7.745960e-1)
+   18.439915 bits average error
+   33.123368 bits max error
+   18.262435 bits average local error
+   33.123368 bits max local error
+   Aggregated over 100000 instances
+

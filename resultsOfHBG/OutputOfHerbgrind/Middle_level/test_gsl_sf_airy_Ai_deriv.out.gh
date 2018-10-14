@@ -1,0 +1,18 @@
+Output @ test_gsl_sf_airy_Ai_deriv.c:25 in main (addr 400C9E)
+24.522229 bits average error
+39.021646 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+    (FPCore (x y z)
+      :pre (and (and (<= -3.244643e2 x) (<= x -3.244643e2)) (and (<= 3.244643e2 y) (<= y 3.244643e2)) (and (<= 1.125791e-3 z) (<= z 1.125791e-3)))
+          (cos (- 2.356194 (* (* x (sqrt y)) (- (+ -4.279246e-2 z) 6.250000e-1)))))
+   airy_der.c:707 in gsl_sf_airy_Ai_deriv_e (addr 4FB60D7)
+   Problematic inputs: -3.244643e2 <= x <= -3.244643e2, 3.244643e2 <= y <= 3.244643e2, 1.125791e-3 <= z <= 1.125791e-3
+   Example problematic input: (-3.244643e2, 3.244643e2, 1.125791e-3)
+   24.506578 bits average error
+   38.761915 bits max error
+   23.028947 bits average local error
+   38.761915 bits max local error
+   Aggregated over 100000 instances
+

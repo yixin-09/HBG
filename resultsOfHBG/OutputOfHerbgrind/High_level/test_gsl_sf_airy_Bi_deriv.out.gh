@@ -1,0 +1,18 @@
+Output @ test_gsl_sf_airy_Bi_deriv.c:25 in main (addr 400C9E)
+21.427346 bits average error
+40.994894 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+    (FPCore (x y z)
+      :pre (and (and (<= -4.056503e2 x) (<= x -4.056501e2)) (and (<= 4.056501e2 y) (<= y 4.056503e2)) (and (<= 1.125793e-3 z) (<= z 1.125793e-3)))
+          (sin (- 2.356194 (* (* x (sqrt y)) (- (+ -4.279246e-2 z) 6.250000e-1)))))
+   airy_der.c:823 in gsl_sf_airy_Bi_deriv_e (addr 4FB7007)
+   Problematic inputs: -4.056503e2 <= x <= -4.056501e2, 4.056501e2 <= y <= 4.056503e2, 1.125793e-3 <= z <= 1.125793e-3
+   Example problematic input: (-4.056503e2, 4.056503e2, 1.125793e-3)
+   21.451071 bits average error
+   41.654619 bits max error
+   20.656114 bits average local error
+   39.768247 bits max local error
+   Aggregated over 100000 instances
+

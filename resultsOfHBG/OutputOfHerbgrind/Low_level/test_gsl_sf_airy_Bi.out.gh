@@ -1,0 +1,9 @@
+Output @ test_gsl_sf_airy_Bi.c:25 in main (addr 400C8E)
+0.412407 bits average error
+1.584963 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+No influences found!
+
+

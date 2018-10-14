@@ -1,0 +1,18 @@
+Output @ test_gsl_sf_eta.c:25 in main (addr 400C89)
+9.682466 bits average error
+23.984524 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+    (FPCore (x)
+      :pre (and (<= -2.001146 x) (<= x -1.998855))
+          (sin (* (fmod x 4.000000) 1.570796)))
+   zeta.c:791 in gsl_sf_zeta_e (addr 5016833)
+   Problematic inputs: -2.001146 <= x <= -1.998855
+   Example problematic input: (-2.001146)
+   9.650395 bits average error
+   23.866153 bits max error
+   9.650395 bits average local error
+   23.866153 bits max local error
+   Aggregated over 99999 instances
+

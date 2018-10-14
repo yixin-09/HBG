@@ -1,0 +1,18 @@
+Output @ test_gsl_sf_bessel_J0.c:25 in main (addr 400C99)
+12.260813 bits average error
+28.524645 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+    (FPCore (x y z a b c)
+      :pre (and (and (<= 2.002771e2 x) (<= x 2.002772e2)) (and (<= 3.895342e-7 y) (<= y 3.895348e-7)) (and (<= 3.246119e-8 z) (<= z 3.246123e-8)) (and (<= -1.802558e-3 a) (<= a -1.802558e-3)) (and (<= 6.492237e-8 b) (<= b 6.492246e-8)) (and (<= 10.000000e-1 c) (<= c 10.000000e-1)))
+          (- (* (+ (sin x) (cos x)) (- 1.000000 (* (* y 5.000000e-1) (- 1.000000 z)))) (* (- (sin x) (cos x)) (* (/ (+ -1.231958e-1 a) x) (- 1.000000 (* b c))))))
+   bessel.c:796 in gsl_sf_bessel_cos_pi4_e (addr 4FBA318)
+   Problematic inputs: 2.002771e2 <= x <= 2.002772e2, 3.895342e-7 <= y <= 3.895348e-7, 3.246119e-8 <= z <= 3.246123e-8, -1.802558e-3 <= a <= -1.802558e-3, 6.492237e-8 <= b <= 6.492246e-8, 10.000000e-1 <= c <= 10.000000e-1
+   Example problematic input: (2.002771e2, 3.895348e-7, 3.246123e-8, -1.802558e-3, 6.492246e-8, 10.000000e-1)
+   12.183680 bits average error
+   28.173322 bits max error
+   2.637647 bits average local error
+   19.441437 bits max local error
+   Aggregated over 100000 instances
+

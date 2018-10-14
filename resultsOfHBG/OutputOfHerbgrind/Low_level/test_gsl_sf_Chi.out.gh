@@ -1,0 +1,18 @@
+Output @ test_gsl_sf_Chi.c:25 in main (addr 400C89)
+14.731475 bits average error
+38.592333 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+    (FPCore (x y z a b c)
+      :pre (and (and (<= -4.091112e-2 x) (<= x -4.088436e-2)) (and (<= 5.153951e-2 y) (<= y 6.764554e-2)) (and (<= -5.238296e-1 z) (<= z 5.238296e-1)) (and (<= -9.390679e-2 a) (<= a -4.779152e-2)) (and (<= -1.454463e-1 b) (<= b -1.154367e-1)) (and (<= -5.238296e-1 c) (<= c 5.238296e-1)))
+          (- (- (+ (+ y -1.869511e-2) (+ z x))) (+ (+ (- a b) (* 5.000000e-1 -3.739021e-2)) (+ c x))))
+   shint.c:116 in gsl_sf_Chi_e (addr 5010B30)
+   Problematic inputs: -4.091112e-2 <= x <= -4.088436e-2, 5.153951e-2 <= y <= 5.154392e-2, -5.238296e-1 <= z <= -5.238156e-1, -4.779430e-2 <= a <= -4.779152e-2, -1.154371e-1 <= b <= -1.154367e-1, 5.238156e-1 <= c <= 5.238296e-1
+   Example problematic input: (-4.088436e-2, 5.154392e-2, -5.238156e-1, -4.779152e-2, -1.154371e-1, 5.238156e-1)
+   14.731475 bits average error
+   38.592333 bits max error
+   13.843494 bits average local error
+   39.317488 bits max local error
+   Aggregated over 100000 instances
+

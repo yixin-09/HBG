@@ -1,0 +1,18 @@
+Output @ test_gsl_sf_Ci.c:25 in main (addr 400C89)
+6.481876 bits average error
+41.127846 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+    (FPCore (x y z a b c i)
+      :pre (and (and (<= 1.511918e-18 x) (<= x 1.791759e-1)) (and (<= -1.033022 y) (<= y -2.891200e-16)) (and (<= 7.793389e-1 z) (<= z 9.137201e-1)) (and (<= -1.659734e-2 a) (<= a -2.241442e-16)) (and (<= 1.940000e-18 b) (<= b 1.075087e-3)) (and (<= 3.622653e-14 c) (<= c 1.938822e-1)) (and (<= 3.334270 i) (<= i 3.413924)))
+          (+ (+ (- (* (+ x y) (/ z 2.000000)) (+ (- a b) c)) (* -3.400428e-1 5.000000e-1)) (- (log i) 5.000000e-1)))
+   sinint.c:366 in gsl_sf_Ci_e (addr 50118E5)
+   Problematic inputs: 1.574492e-1 <= x <= 1.791759e-1, -1.033022 <= y <= -1.033022, 7.793413e-1 <= z <= 9.137201e-1, -1.659734e-2 <= a <= -1.426509e-2, 1.069749e-3 <= b <= 1.075087e-3, 1.938822e-1 <= c <= 1.938822e-1, 3.334271 <= i <= 3.413924
+   Example problematic input: (1.769819e-1, -1.033022, 8.999825e-1, -1.636058e-2, 1.070293e-3, 1.938822e-1, 3.405867)
+   6.481876 bits average error
+   41.127846 bits max error
+   5.317219 bits average local error
+   37.568103 bits max local error
+   Aggregated over 100000 instances
+

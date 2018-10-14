@@ -1,0 +1,18 @@
+Output @ test_gsl_sf_psi_1.c:25 in main (addr 400C89)
+11.033152 bits average error
+25.524413 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+    (FPCore (x)
+      :pre (and (<= -8.003458 x) (<= x -7.996512))
+          (sin (* x 3.141593)))
+   psi.c:757 in gsl_sf_psi_1_e (addr 50100BC)
+   Problematic inputs: -8.003458 <= x <= -7.996512
+   Example problematic input: (-8.003458)
+   9.998446 bits average error
+   24.378474 bits max error
+   9.998446 bits average local error
+   24.378474 bits max local error
+   Aggregated over 100000 instances
+

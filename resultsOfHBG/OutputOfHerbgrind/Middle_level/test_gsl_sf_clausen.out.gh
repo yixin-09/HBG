@@ -1,0 +1,18 @@
+Output @ test_gsl_sf_clausen.c:25 in main (addr 400C89)
+14.808782 bits average error
+36.296821 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+    (FPCore (x y z a b c i)
+      :pre (and (and (<= 7.998206e-19 x) (<= x 2.135870e-3)) (and (<= 6.800000e-18 y) (<= y 7.233243e-2)) (and (<= 1.999552 z) (<= z 2.000000)) (and (<= 1.519623e-17 a) (<= a 7.063723e-5)) (and (<= 4.000000e-19 b) (<= b 1.467522e-6)) (and (<= 1.100000e-16 c) (<= c 1.016425e-3)) (and (<= 3.141417 i) (<= i 3.141593)))
+          (- (+ (- (* (+ x y) (/ z 2.000000)) (+ (- a b) c)) (* 5.000000e-1 2.142694)) (log i)))
+   clausen.c:94 in gsl_sf_clausen_e (addr 4FCD9C7)
+   Problematic inputs: 2.135350e-3 <= x <= 2.135870e-3, 7.233243e-2 <= y <= 7.233243e-2, 1.999552 <= z <= 2.000000, 7.061994e-5 <= a <= 7.063723e-5, 1.467487e-6 <= b <= 1.467522e-6, 1.016425e-3 <= c <= 1.016425e-3, 3.141417 <= i <= 3.141593
+   Example problematic input: (2.135350e-3, 7.233243e-2, 1.999552, 7.061994e-5, 1.467487e-6, 1.016425e-3, 3.141417)
+   14.726991 bits average error
+   36.645325 bits max error
+   14.409672 bits average local error
+   34.802096 bits max local error
+   Aggregated over 100000 instances
+

@@ -1,0 +1,18 @@
+Output @ test_gsl_sf_lnsinh.c:25 in main (addr 400C89)
+11.717207 bits average error
+39.806770 bits max error
+Aggregated over 100000 instances
+Influenced by erroneous expression:
+
+    (FPCore (x y)
+      :pre (and (and (<= 8.812235e-1 x) (<= x 8.815462e-1)) (and (<= 6.592241e-3 y) (<= y 6.597159e-3)))
+          (log (* (+ (* (+ y 1.666667e-1) (* x x)) 1.000000) x)))
+   trig.c:450 in gsl_sf_lnsinh_e (addr 5014E8D)
+   Problematic inputs: 8.812235e-1 <= x <= 8.815462e-1, 6.592241e-3 <= y <= 6.597159e-3
+   Example problematic input: (8.815136e-1, 6.596662e-3)
+   11.717207 bits average error
+   39.806770 bits max error
+   11.171208 bits average local error
+   39.806770 bits max local error
+   Aggregated over 100000 instances
+
