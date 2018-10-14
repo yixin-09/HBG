@@ -1,2 +1,2 @@
 # HBG
-Herbie plus Herbgrind
+Herbgrind and Herbie
